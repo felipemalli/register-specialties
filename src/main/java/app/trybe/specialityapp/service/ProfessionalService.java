@@ -24,7 +24,6 @@ public class ProfessionalService {
     if (professional.getId() != null) {
       throw new Error("Não é permitido inserir novos registros com ID explícito");
     }
-
     professionalRepository.save(professional);
 
     return "Inserido";
