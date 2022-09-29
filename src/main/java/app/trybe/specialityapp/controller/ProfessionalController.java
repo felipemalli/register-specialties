@@ -16,8 +16,9 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 
+
 /**
- * Classe ProfessionalController.
+ * ProfessionalController class.
  */
 @Path("/professional")
 public class ProfessionalController {
