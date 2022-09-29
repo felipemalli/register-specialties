@@ -10,6 +10,7 @@ public class ApplicationError extends RuntimeException {
   private String message;
 
   public ApplicationError(Status status, String message) {
+    super(message);
     this.status = status;
     this.message = message;
   }
