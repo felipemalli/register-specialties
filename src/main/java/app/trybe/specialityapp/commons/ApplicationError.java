@@ -26,12 +26,11 @@ public class ApplicationError extends RuntimeException {
     this.status = status;
   }
 
-  @Override
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setError(String message) {
     this.message = message;
   }
 }

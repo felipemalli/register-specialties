@@ -1,9 +1,11 @@
 package app.trybe.specialityapp.service;
 
+import app.trybe.specialityapp.commons.ApplicationError;
 import app.trybe.specialityapp.model.Professional;
 import app.trybe.specialityapp.repository.ProfessionalRepository;
 import java.util.List;
 import java.util.Optional;
+import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +21,8 @@ public class ProfessionalService {
    */
   public String insert(Professional professional) {
     if (professional.getId() != null) {
-      throw new Error("Não é permitido inserir novos registros com ID explícito");
+      throw new ApplicationError(Response.Status.BAD_REQUEST,
+              "Não é permitido inserir novos registros com ID explícito");
     }
     professionalRepository.save(professional);
 
@@ -33,7 +36,8 @@ public class ProfessionalService {
     List<Professional> professionals = professionalRepository.findAll();
 
     if (professionals.isEmpty()) {
-      throw new Error("Nenhum registro foi encontrado!");
+      throw new ApplicationError(Response.Status.NOT_FOUND,
+              "Nenhum registro foi encontrado!");
     }
 
     return professionals;
@@ -46,7 +50,8 @@ public class ProfessionalService {
     Optional<Professional> actualProfessional = professionalRepository.findById(id);
 
     if (actualProfessional.isEmpty()) {
-      throw new Error("Não é possível editar, o ID informado não existe");
+      throw new ApplicationError(Response.Status.NOT_FOUND,
+              "Não é possível editar, o ID informado não existe");
     }
     actualProfessional.get().setName(professional.getName());
     actualProfessional.get().setSpeciality(professional.getSpeciality());
@@ -61,7 +66,8 @@ public class ProfessionalService {
     Optional<Professional> actualProfessional = professionalRepository.findById(id);
 
     if (actualProfessional.isEmpty()) {
-      throw new Error("Não é possível deletar, o ID informado não existe");
+      throw new ApplicationError(Response.Status.NOT_FOUND,
+              "Não é possível deletar, o ID informado não existe");
     }
     professionalRepository.deleteById(id);
 
