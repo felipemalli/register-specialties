@@ -46,7 +46,7 @@ public class ProfessionalService {
   /**
    * Update a professional.
    */
-  public String edit(int id, Professional professional) {
+  public String edit(Integer id, Professional professional) {
     Optional<Professional> actualProfessional = professionalRepository.findById(id);
 
     if (actualProfessional.isEmpty()) {
@@ -62,7 +62,7 @@ public class ProfessionalService {
   /**
    * Delete a professional.
    */
-  public String delete(int id) {
+  public String delete(Integer id) {
     Optional<Professional> actualProfessional = professionalRepository.findById(id);
 
     if (actualProfessional.isEmpty()) {
