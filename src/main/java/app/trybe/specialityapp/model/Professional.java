@@ -33,6 +33,8 @@ public class Professional {
     this.speciality = speciality;
   }
 
+  public Professional() {}
+
   public Integer getId() {
     return id;
   }
