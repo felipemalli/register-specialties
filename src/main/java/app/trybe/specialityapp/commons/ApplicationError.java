@@ -9,6 +9,9 @@ public class ApplicationError extends RuntimeException {
   private Status status;
   private String message;
 
+  /**
+   * ApplicationError constructor.
+   */
   public ApplicationError(Status status, String message) {
     super(message);
     this.status = status;
