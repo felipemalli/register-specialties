@@ -4,7 +4,6 @@ import app.trybe.specialityapp.model.Professional;
 import app.trybe.specialityapp.repository.ProfessionalRepository;
 import java.util.List;
 import java.util.Optional;
-import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
