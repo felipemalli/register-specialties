@@ -20,7 +20,7 @@ public class ProfessionalService {
   /**
    * Create a new professional.
    */
-  public String create(Professional professional) {
+  public String insert(Professional professional) {
     if (professional.getId() != null) {
       throw new Error("Não é permitido inserir novos registros com ID explícito");
     }
@@ -32,7 +32,7 @@ public class ProfessionalService {
   /**
    * Read all professionals.
    */
-  public List<Professional> readAll() {
+  public List<Professional> findAll() {
     List<Professional> professionals = professionalRepository.findAll();
 
     if (professionals.isEmpty()) {
@@ -45,7 +45,7 @@ public class ProfessionalService {
   /**
    * Update a professional.
    */
-  public String update(int id, Professional professional) {
+  public String edit(int id, Professional professional) {
     Optional<Professional> actualProfessional = professionalRepository.findById(id);
 
     if (actualProfessional.isEmpty()) {
