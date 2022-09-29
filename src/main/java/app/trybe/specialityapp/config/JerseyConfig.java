@@ -28,5 +28,7 @@ public class JerseyConfig extends ResourceConfig {
         logger.info("Configurando binder");
       }
     });
+
+    register(ProfessionalController.class);
   }
 }
