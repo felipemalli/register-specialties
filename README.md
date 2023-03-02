@@ -1,6 +1,6 @@
 # Register Specialties
 
-This project is a API rest with simple CRUD for handling professionals and their specialties.
+This project is a API REST with simple CRUD for handling professionals and their specialties.
 It was made with Spring and implementing JAX-RS with jersey library.
 
 <br>
@@ -23,7 +23,7 @@ It was made with Spring and implementing JAX-RS with jersey library.
 You can use Postman to access the API in this route:
 `http://localhost:8080/{route}`
 
-### Summary
+### Endpoints Summary
 
 - Create a new professional: `POST /api/professional/add`
 
