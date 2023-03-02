@@ -1,6 +1,7 @@
 # Register Specialties
 
-This project is a API rest with simple CRUD implementing JAX-RS (with jersey library).
+This project is a API rest with simple CRUD for handling professionals and their specialties.
+Is implementing JAX-RS with jersey library.
 
 <br>
 
