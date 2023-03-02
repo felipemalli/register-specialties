@@ -31,7 +31,7 @@ You can use Postman to access the API in this route:
 
 - Update a professional: `PUT /api/professional/edit/{id}`
 
-- Delete a professional: `PUT /api/professional/delete/{id}`
+- Delete a professional: `DELETE /api/professional/delete/{id}`
 
 
 ### More informations
